@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 196 10% 7%; /* #0e1718 - dark navy/black */
+    --foreground: 0 0% 97%; /* #f7f7f7 - off-white */
+
+    --card: 196 10% 7%;
+    --card-foreground: 0 0% 97%;
+
+    --popover: 196 10% 7%;
+    --popover-foreground: 0 0% 97%;
+
+    --primary: 44 70% 54%; /* #cdb835 - gold */
+    --primary-foreground: 196 10% 7%;
+
+    --secondary: 194 30% 44%; /* #467596 - blue */
+    --secondary-foreground: 0 0% 97%;
+
+    --muted: 196 8% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 358 37% 36%; /* #6f3233 - maroon */
+    --accent-foreground: 0 0% 97%;
+
+    --destructive: 0 72% 53%; /* #db353e - red */
+    --destructive-foreground: 0 0% 97%;
+
+    --border: 196 5% 20%;
+    --input: 196 5% 20%;
+    --ring: 44 70% 54%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-montserrat);
+  }
+  h1, h2, h3 {
+    font-family: var(--font-abril);
+  }
+  p {
+    font-family: var(--font-opensans);
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .header-gradient {
+    background: linear-gradient(rgba(14, 23, 24, 0.8), rgba(14, 23, 24, 0.8));
+  }
+
+  .heading-xl {
+    font-family: var(--font-abril);
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  .heading-lg {
+    font-family: var(--font-abril);
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  .heading-md {
+    font-family: var(--font-abril);
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  .heading-sm {
+    font-family: var(--font-abril);
+    @apply text-xl md:text-2xl font-bold;
+  }
+
+  .subtitle {
+    font-family: var(--font-montserrat);
+    @apply text-sm md:text-base uppercase tracking-wider text-primary;
+  }
+
+  .body-text {
+    font-family: var(--font-opensans);
+    @apply text-base leading-relaxed;
+  }
+
+  .nav-link {
+    @apply hover:text-primary transition-colors;
+  }
+}
